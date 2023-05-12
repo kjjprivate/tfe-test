@@ -14,8 +14,8 @@ provider "aws" {
 resource "aws_instance" "instance" {
   ami           = "ami-058165de3b7202099"
   instance_type = "t2.micro"
-  key_name="JIN"
-   tags = {
+  key_name      = "JIN"
+  tags = {
     Name = "jj-vault"
   }
 }
@@ -29,10 +29,13 @@ resource "aws_instance" "instance2" {
   }
 }
 */
-output  "public_ips"{
-  value=[
-	aws_instance.instance.public_ip,
-	  	//aws_instance.instance2.public_ip,
+output "public_ips" {
+  value = [
+    aws_instance.instance.public_ip,
+    //aws_instance.instance2.public_ip,
 
-	]
+  ]
+}
+output "test2" {
+  value = "Test2"
 }
