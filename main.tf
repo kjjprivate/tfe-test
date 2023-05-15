@@ -19,7 +19,7 @@ resource "aws_instance" "instance" {
     Name = "jj-vault"
   }
 }
-/*
+
 resource "aws_instance" "instance2" {
   ami           = "ami-058165de3b7202099"
   instance_type = "t2.micro"
@@ -28,11 +28,11 @@ resource "aws_instance" "instance2" {
     Name = "jj-vault"
   }
 }
-*/
+
 output "public_ips" {
   value = [
     aws_instance.instance.public_ip,
-    //aws_instance.instance2.public_ip,
+    aws_instance.instance2.public_ip,
 
   ]
 }
