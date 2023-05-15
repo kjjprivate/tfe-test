@@ -37,5 +37,5 @@ output "public_ips" {
   ]
 }
 output "test2" {
-  value = "Test2"
+  value = "Testforthird"
 }
